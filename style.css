@@ -1,0 +1,142 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+  --motif-color: rgb(255, 156, 37);
+  --accent-color: rgb(51, 136, 179);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 5%;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav__li {
+  list-style: none;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.nav__a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.main {
+  display: grid;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: grid;
+  align-items: end;
+}
+
+.hero__container {
+  display: grid;
+  color: var(--secondary-color);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+.slogan__section {
+  width: 1220px;
+  margin: 75px auto;
+}
+
+.slogan {
+  font-size: 3.375rem;
+  text-align: center;
+}
+
+.slogan__p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.about {
+  max-width: 1220px;
+  margin: 75px auto;
+  /* background-color: cadetblue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title ."
+    "content portrait"
+    "book portrait"
+    "book info"
+    "button button";
+  grid-column-gap: 100px;
+}
+
+.about__title {
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--motif-color);
+  margin: 4.5rem 0 3rem;
+}
+
+.about__content {
+  grid-area: content;
+}
+
+.portrait {
+  grid-area: portrait;
+  transform: translate(-20px, -26px);
+  border-radius: 10px;
+}
+
+.book {
+  grid-area: book;
+  margin-top: 3.5rem;
+  border-radius: 10px;
+}
+
+.about__content-book {
+  grid-area: info;
+  transform: translate(-20px, 0);
+  padding: 0 34px;
+}
+
+.about__button {
+  grid-area: button;
+}
+
+.offer {
+  background-color: darkkhaki;
+}
+
+.contact {
+  background-color: deeppink;
+}
