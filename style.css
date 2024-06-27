@@ -25,10 +25,11 @@ body {
 }
 
 .header__nav {
+  max-width: 1220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px 5%;
+  margin: 5px auto;
 }
 
 .logo {
@@ -36,14 +37,21 @@ body {
 }
 
 .nav__li {
+
   list-style: none;
   margin: 1rem;
   display: inline-block;
 }
 
 .nav__a {
+  height: 50%;
   text-decoration: none;
   color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav__a:hover {
+  color: var(--motif-color);
 }
 
 .main {
