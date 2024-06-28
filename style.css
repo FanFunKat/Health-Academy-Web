@@ -286,3 +286,15 @@ body {
 .footer__p {
   width: 1220px;
 }
+
+.icon_cont {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  transform: translateY(4px);
+}
+
+.contact__a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
