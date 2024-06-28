@@ -237,13 +237,14 @@ body {
   width: 1220px;
   margin: 0 auto 75px;
   display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "title ."
     "contact map"
     "account map";
   grid-column-gap: 75px;
+  justify-content: space-between;
 }
 
 .contact__title {
@@ -261,7 +262,7 @@ body {
 
 .map {
   grid-area: map;
-  background-color: var(--shadow-color);
+  /* background-color: var(--shadow-color); */
   border-radius: 10px;
 }
 
