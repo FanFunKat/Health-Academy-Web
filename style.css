@@ -37,7 +37,6 @@ body {
 }
 
 .nav__li {
-
   list-style: none;
   margin: 1rem;
   display: inline-block;
@@ -59,7 +58,7 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  height: 100dvh;
   background-image: url(img/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -76,12 +75,13 @@ body {
 }
 
 .slogan__section {
-  width: 1220px;
+  max-width: 1220px;
   margin: 75px auto;
 }
 
 .slogan {
   font-size: 3.375rem;
+  line-height: 4rem;
   text-align: center;
 }
 
@@ -262,7 +262,6 @@ body {
 
 .map {
   grid-area: map;
-  /* background-color: var(--shadow-color); */
   border-radius: 10px;
 }
 
@@ -298,4 +297,110 @@ body {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav {
+    max-width: 90%;
+  }
+
+  .nav__li {
+    display: none;
+  }
+
+  .hero {
+    height: 100dvh;
+    background-attachment: local;
+  }
+
+  .slogan__section {
+    max-width: 80%;
+  }
+
+  .slogan {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+
+  .slogan__p {
+    font-size: 1rem;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .about {
+    max-width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "content"
+      "portrait"
+      "info"
+      "book"
+      "button";
+  }
+
+  .portrait {
+    width: 100%;
+    transform: translate(0, 0);
+    justify-self: center;
+  }
+
+  .book {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .about__content-book {
+    transform: translate(0, 0);
+  }
+
+  .offer__container {
+    max-width: 80%;
+    margin: 0 auto 700px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "content"
+      "price1"
+      "price2"
+      "price3"
+      "price4"
+      "button";
+  }
+
+  .offer__price {
+    margin-top: 3.5rem;
+    height: 260px;
+  }
+
+  .contact {
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "contact"
+      "account"
+      "map";
+    justify-content: left;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+    background-image: url(img/footer.png);
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: cover;
+  }
+
+  .footer__p {
+    width: 80%;
+  }
+
+
 }
