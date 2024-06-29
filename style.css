@@ -27,14 +27,14 @@ body {
 .header__nav {
   max-width: 1220px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 5px auto;
 }
 
-.logo {
+/* .logo {
   height: 60px;
-}
+} */
 
 .nav__li {
 
@@ -209,10 +209,10 @@ body {
 .offer__price {
   background-color: var(--secondary-color);
   margin-top: 3.5rem;
-  height: 260px;
   border-radius: 10px;
   box-shadow: 0px 10px 20px 5px var(--shadow-color);
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem;
