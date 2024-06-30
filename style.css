@@ -19,6 +19,8 @@ body {
 
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99;
   width: 100%;
   background-color: var(--secondary-color);
@@ -29,24 +31,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px auto;
+  margin: 0.5rem auto;
 }
-
-/* .logo {
-  height: 60px;
-} */
 
 .nav__li {
   list-style: none;
-  margin: 1rem;
+  margin: 0.25rem 1rem;
   display: inline-block;
 }
 
 .nav__a {
-  height: 50%;
   text-decoration: none;
   color: var(--primary-color);
-  font-weight: 600;
 }
 
 .nav__a:hover {
@@ -61,6 +57,7 @@ body {
   height: 100dvh;
   background-image: url(img/hero.jpg);
   background-size: cover;
+  /* background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -86,6 +83,7 @@ body {
 }
 
 .slogan__p {
+  padding-top: 1rem;
   font-size: 2rem;
   line-height: 2.5rem;
   text-align: center;
@@ -93,7 +91,7 @@ body {
 
 .about {
   max-width: 1220px;
-  margin: 75px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -114,7 +112,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: var(--motif-color);
-  margin: 4.5rem 0 3rem;
+  margin: 3.5rem 0 3rem;
 }
 
 .about__content {
@@ -152,9 +150,11 @@ body {
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: 600;
+  text-align: center;
 }
 
 .offer {
+  width: 100%;
   background-image: url(img/cenniktlo.png);
   background-size: cover;
   background-position: bottom;
@@ -174,7 +174,7 @@ body {
     "content ."
     "price1 price2"
     "price3 price4"
-    "button button";
+    "button-offer button-offer";
   grid-column-gap: 75px;
 }
 
@@ -203,7 +203,12 @@ body {
 }
 
 .offer__button {
-  grid-area: button;
+  grid-area: button-offer;
+}
+
+.offer__button--sm {
+  grid-area: button-offer;
+  display: none;
 }
 
 .offer__price {
@@ -280,7 +285,7 @@ body {
   color: var(--secondary-color);
   justify-content: center;
   font-weight: 300;
-  padding-bottom: 25px;
+  padding: 1rem 0;
 }
 
 .footer__p {
@@ -301,25 +306,29 @@ body {
 
 @media screen and (max-width: 767px) {
   .header__nav {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .nav__li {
-    display: none;
+    font-size: 0.5rem;
+    font-weight: bold;
+    margin: 0.25rem 0.75rem;
   }
 
   .hero {
-    height: 100dvh;
-    background-attachment: local;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
   .slogan__section {
     max-width: 80%;
+    margin: 50px auto;
   }
 
   .slogan {
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
     text-align: left;
   }
 
@@ -341,6 +350,13 @@ body {
       "button";
   }
 
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--motif-color);
+    margin: 3.5rem 0 2rem;
+  }
+
   .portrait {
     width: 100%;
     transform: translate(0, 0);
@@ -354,11 +370,26 @@ body {
 
   .about__content-book {
     transform: translate(0, 0);
+    padding: 0;
+  }
+
+  .portrait,
+  .book,
+  .about__content-book,
+  .offer__price,
+  .contact__account,
+  .map {
+    margin-top: 2rem;
+  }
+
+  .offer {
+    background-size: 130%;
+    background-position: bottom;
   }
 
   .offer__container {
     max-width: 80%;
-    margin: 0 auto 700px;
+    margin: 0 auto 220px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
@@ -367,16 +398,33 @@ body {
       "price2"
       "price3"
       "price4"
-      "button";
+      "button-offer";
   }
 
-  .offer__price {
-    margin-top: 3.5rem;
-    height: 260px;
+  .offer__button {
+    display: none;
+  }
+
+  .offer__button--sm {
+    display: block;
+  }
+
+  .offer__price--title,
+  .contact__title--data {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: var(--primary-color);
+  }
+
+  .offer__price--price {
+    color: var(--motif-color);
+    font-weight: 600;
+    font-size: 1rem;
   }
 
   .contact {
-    width: 80%;
+    width: 80vw;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
@@ -391,7 +439,6 @@ body {
   }
 
   .footer {
-    width: 100%;
     background-image: url(img/footer.png);
     background-repeat: no-repeat;
     height: auto;
@@ -400,7 +447,6 @@ body {
 
   .footer__p {
     width: 80%;
+    font-size: 0.5rem;
   }
-
-
 }
