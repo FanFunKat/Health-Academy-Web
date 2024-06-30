@@ -163,7 +163,6 @@ body {
 }
 
 .offer__container {
-  /* background-color: blue; */
   max-width: 1220px;
   margin: 0 auto 700px;
   display: grid;
@@ -315,12 +314,6 @@ body {
     margin: 0.25rem 0.75rem;
   }
 
-  .hero {
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
   .slogan__section {
     max-width: 80%;
     margin: 50px auto;
@@ -384,7 +377,6 @@ body {
 
   .offer {
     background-size: 130%;
-    background-position: bottom;
   }
 
   .offer__container {
@@ -439,14 +431,103 @@ body {
   }
 
   .footer {
-    background-image: url(img/footer.png);
     background-repeat: no-repeat;
     height: auto;
-    background-size: cover;
   }
 
   .footer__p {
     width: 80%;
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+
+  .header__nav,
+  .slogan__section,
+  .about,
+  .offer__container {
+    max-width: 80%;
+  }
+
+  .slogan,
+  .slogan__p {
+    text-align: left;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "content"
+      "portrait"
+      "info"
+      "book"
+      "button";
+  }
+
+  .portrait {
+    width: 100%;
+    transform: translate(0, 0);
+    justify-self: center;
+  }
+
+  .book {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .about__content-book {
+    transform: translate(0, 0);
+    padding: 0;
+  }
+
+  .portrait,
+  .book,
+  .about__content-book,
+  .offer__price,
+  .map {
+    margin-top: 2rem;
+  }
+
+  .offer {
+    background-size: 130%;
+  }
+
+  .offer__container {
+    margin: 0 auto 450px;
+    grid-template-areas:
+      "title ."
+      "content content"
+      "price1 price2"
+      "price3 price4"
+      "button-offer button-offer";
+    grid-column-gap: 2rem;
+  }
+
+  .contact {
+    width: 80vw;
+    grid-template-areas:
+      "title ."
+      "contact account"
+      "map map";
+    justify-content: left;
+  }
+
+  .contact__account {
+    margin-top: 0;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .footer {
+    height: 20vh;
+  }
+
+  .footer__p {
+    width: 80vw;
     font-size: 0.5rem;
   }
 }
