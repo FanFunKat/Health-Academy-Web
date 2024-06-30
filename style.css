@@ -17,8 +17,12 @@ body {
   width: 100%;
 }
 
+/* __________________________________________________________________________Header */
+
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99;
   width: 100%;
   background-color: var(--secondary-color);
@@ -29,37 +33,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px auto;
+  margin: 0.5rem auto;
 }
 
-/* .logo {
-  height: 60px;
-} */
+.icon_nav {
+  width: 1.5rem;
+  display: none
+}
 
 .nav__li {
-
   list-style: none;
-  margin: 1rem;
+  margin: 0.25rem 1rem;
   display: inline-block;
 }
 
 .nav__a {
-  height: 50%;
   text-decoration: none;
   color: var(--primary-color);
-  font-weight: 600;
 }
 
 .nav__a:hover {
   color: var(--motif-color);
 }
 
+/* __________________________________________________________________________Main */
+
 .main {
   display: grid;
+  grid-template-columns: 1fr;
 }
 
+/* __________________________________________________________________________Home */
+
 .hero {
-  height: 100vh;
+  height: 100dvh;
   background-image: url(img/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -76,24 +83,28 @@ body {
 }
 
 .slogan__section {
-  width: 1220px;
+  max-width: 1220px;
   margin: 75px auto;
 }
 
 .slogan {
   font-size: 3.375rem;
+  line-height: 4rem;
   text-align: center;
 }
 
 .slogan__p {
+  padding-top: 1rem;
   font-size: 2rem;
   line-height: 2.5rem;
   text-align: center;
 }
 
+/* __________________________________________________________________________About */
+
 .about {
   max-width: 1220px;
-  margin: 75px auto 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -114,7 +125,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: var(--motif-color);
-  margin: 4.5rem 0 3rem;
+  margin: 3.5rem 0 3rem;
 }
 
 .about__content {
@@ -145,16 +156,20 @@ body {
 
 .button {
   justify-self: center;
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   padding: 8px 16px;
   border-radius: 10px;
   background-color: var(--accent-color);
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: 600;
+  text-align: center;
 }
 
+/* __________________________________________________________________________Offer */
+
 .offer {
+  width: 100%;
   background-image: url(img/cenniktlo.png);
   background-size: cover;
   background-position: bottom;
@@ -163,23 +178,22 @@ body {
 }
 
 .offer__container {
-  /* background-color: blue; */
   max-width: 1220px;
-  margin: 0 auto 700px;
+  margin: 0 auto 36.5dvw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "title ."
+    "title-offer ."
     "content ."
     "price1 price2"
     "price3 price4"
-    "button button";
+    "button-offer button-offer";
   grid-column-gap: 75px;
 }
 
-.offer_title {
-  grid-area: title;
+.offer__title {
+  grid-area: title-offer;
 }
 
 .offer__description {
@@ -203,7 +217,12 @@ body {
 }
 
 .offer__button {
-  grid-area: button;
+  grid-area: button-offer;
+}
+
+.offer__button--sm {
+  grid-area: button-offer;
+  display: none;
 }
 
 .offer__price {
@@ -232,15 +251,17 @@ body {
   font-size: 1.5rem;
 }
 
+/* __________________________________________________________________________Contact */
+
 .contact {
   background-color: var(--secondary-color);
   width: 1220px;
-  margin: 0 auto 75px;
+  margin: 0 auto 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "title ."
+    "title-cont ."
     "contact map"
     "account map";
   grid-column-gap: 75px;
@@ -248,7 +269,7 @@ body {
 }
 
 .contact__title {
-  grid-area: title;
+  grid-area: title-cont;
 }
 
 .contact__info {
@@ -260,16 +281,22 @@ body {
   margin-top: 3.5rem;
 }
 
-.map {
+.map__div {
   grid-area: map;
-  /* background-color: var(--shadow-color); */
+
+}
+
+.map {
   border-radius: 10px;
+  max-height: 414px;
 }
 
 .contact__title--data {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
 }
+
+/* __________________________________________________________________________Footer */
 
 .footer {
   background-image: url(img/footer.png);
@@ -281,7 +308,7 @@ body {
   color: var(--secondary-color);
   justify-content: center;
   font-weight: 300;
-  padding-bottom: 25px;
+  padding: 1rem 0;
 }
 
 .footer__p {
@@ -298,4 +325,232 @@ body {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: bold;
+}
+
+/* media max-width = 1280 px______________________________________________________________________________________________________________ */
+
+@media screen and (max-width: 1280px) {
+
+  .header__nav,
+  .slogan__section,
+  .about,
+  .offer__container {
+    max-width: 80%;
+  }
+
+  .slogan,
+  .slogan__p {
+    text-align: left;
+  }
+
+  .slogan__p {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "content"
+      "portrait"
+      "info"
+      "book"
+      "button";
+  }
+
+  .portrait {
+    width: 100%;
+    transform: translate(0, 0);
+    justify-self: center;
+  }
+
+  .book {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .about__content-book {
+    transform: translate(0, 0);
+    padding: 0;
+  }
+
+  .portrait,
+  .book,
+  .about__content-book,
+  .offer__price,
+  .map {
+    margin-top: 2rem;
+  }
+
+  .offer__container {
+    grid-template-areas:
+      "title-offer title-offer"
+      "content content"
+      "price1 price2"
+      "price3 price4"
+      "button-offer button-offer";
+    grid-column-gap: 2rem;
+  }
+
+  .contact {
+    width: 80vw;
+    grid-template-areas:
+      "title-cont title-cont"
+      "contact account"
+      "map map";
+    justify-content: left;
+    grid-column-gap: 2rem;
+  }
+
+  .contact__account {
+    margin-top: 0;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .footer {
+    height: 20vh;
+  }
+
+  .footer__p {
+    width: 80vw;
+    font-size: 0.75rem;
+  }
+}
+
+/* media max-width = 1024 px______________________________________________________________________________________________________________ */
+
+@media screen and (max-width: 1024px) {
+
+  .nav__li {
+    margin: 0.25rem 0.75rem;
+  }
+
+  .slogan__section {
+    margin: 60px auto;
+  }
+
+  .slogan {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .slogan__p {
+    padding-top: 0.75rem;
+  }
+
+  .offer {
+    background-size: 130%;
+  }
+
+  .offer__container {
+    margin: 0 auto 50dvw;
+  }
+
+  .offer__price--title,
+  .contact__title--data {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .offer__price--price {
+    font-size: 1.2rem;
+  }
+}
+
+/* media max-width = 767 px______________________________________________________________________________________________________________ */
+
+
+@media screen and (max-width: 767px) {
+
+  .header__nav {
+    max-width: 90%;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+  }
+
+  .icon_nav {
+    display: block
+  }
+
+  .nav__li {
+    display: none;
+  }
+
+  .slogan__section {
+    margin: 50px auto;
+  }
+
+  .slogan {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .slogan__p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin: 3.5rem 0 2rem;
+  }
+
+  .button {
+    margin-top: 2.5rem;
+  }
+
+  .contact__account {
+    margin-top: 2rem;
+  }
+
+  .offer__container {
+    margin: 0 auto 60dvw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title-offer"
+      "content"
+      "price1"
+      "price2"
+      "price3"
+      "price4"
+      "button-offer";
+  }
+
+  .offer__button {
+    display: none;
+  }
+
+  .offer__button--sm {
+    display: block;
+  }
+
+  .offer__price--title,
+  .contact__title--data {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .offer__price--price {
+    font-size: 1rem;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title-cont"
+      "contact"
+      "account"
+      "map";
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .footer__p {
+    font-size: 0.5rem;
+  }
 }
