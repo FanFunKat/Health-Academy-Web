@@ -17,6 +17,8 @@ body {
   width: 100%;
 }
 
+/* __________________________________________________________________________Header */
+
 .header {
   position: fixed;
   top: 0;
@@ -34,6 +36,11 @@ body {
   margin: 0.5rem auto;
 }
 
+.icon_nav {
+  width: 1.5rem;
+  display: none
+}
+
 .nav__li {
   list-style: none;
   margin: 0.25rem 1rem;
@@ -49,15 +56,19 @@ body {
   color: var(--motif-color);
 }
 
+/* __________________________________________________________________________Main */
+
 .main {
   display: grid;
+  grid-template-columns: 1fr;
 }
+
+/* __________________________________________________________________________Home */
 
 .hero {
   height: 100dvh;
   background-image: url(img/hero.jpg);
   background-size: cover;
-  /* background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -88,6 +99,8 @@ body {
   line-height: 2.5rem;
   text-align: center;
 }
+
+/* __________________________________________________________________________About */
 
 .about {
   max-width: 1220px;
@@ -143,7 +156,7 @@ body {
 
 .button {
   justify-self: center;
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   padding: 8px 16px;
   border-radius: 10px;
   background-color: var(--accent-color);
@@ -152,6 +165,8 @@ body {
   font-weight: 600;
   text-align: center;
 }
+
+/* __________________________________________________________________________Offer */
 
 .offer {
   width: 100%;
@@ -164,12 +179,12 @@ body {
 
 .offer__container {
   max-width: 1220px;
-  margin: 0 auto 700px;
+  margin: 0 auto 36.5dvw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "title ."
+    "title-offer ."
     "content ."
     "price1 price2"
     "price3 price4"
@@ -177,8 +192,8 @@ body {
   grid-column-gap: 75px;
 }
 
-.offer_title {
-  grid-area: title;
+.offer__title {
+  grid-area: title-offer;
 }
 
 .offer__description {
@@ -236,15 +251,17 @@ body {
   font-size: 1.5rem;
 }
 
+/* __________________________________________________________________________Contact */
+
 .contact {
   background-color: var(--secondary-color);
   width: 1220px;
-  margin: 0 auto 75px;
+  margin: 0 auto 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "title ."
+    "title-cont ."
     "contact map"
     "account map";
   grid-column-gap: 75px;
@@ -252,7 +269,7 @@ body {
 }
 
 .contact__title {
-  grid-area: title;
+  grid-area: title-cont;
 }
 
 .contact__info {
@@ -264,15 +281,22 @@ body {
   margin-top: 3.5rem;
 }
 
-.map {
+.map__div {
   grid-area: map;
+
+}
+
+.map {
   border-radius: 10px;
+  max-height: 414px;
 }
 
 .contact__title--data {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
 }
+
+/* __________________________________________________________________________Footer */
 
 .footer {
   background-image: url(img/footer.png);
@@ -303,36 +327,28 @@ body {
   font-weight: bold;
 }
 
-@media screen and (max-width: 767px) {
-  .header__nav {
+/* media max-width = 1280 px______________________________________________________________________________________________________________ */
+
+@media screen and (max-width: 1280px) {
+
+  .header__nav,
+  .slogan__section,
+  .about,
+  .offer__container {
     max-width: 80%;
   }
 
-  .nav__li {
-    font-size: 0.5rem;
-    font-weight: bold;
-    margin: 0.25rem 0.75rem;
-  }
-
-  .slogan__section {
-    max-width: 80%;
-    margin: 50px auto;
-  }
-
-  .slogan {
-    font-size: 2rem;
-    line-height: 2.2rem;
+  .slogan,
+  .slogan__p {
     text-align: left;
   }
 
   .slogan__p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: normal;
-    text-align: left;
   }
 
   .about {
-    max-width: 80%;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
@@ -341,13 +357,6 @@ body {
       "info"
       "book"
       "button";
-  }
-
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--motif-color);
-    margin: 3.5rem 0 2rem;
   }
 
   .portrait {
@@ -370,9 +379,67 @@ body {
   .book,
   .about__content-book,
   .offer__price,
-  .contact__account,
   .map {
     margin-top: 2rem;
+  }
+
+  .offer__container {
+    grid-template-areas:
+      "title-offer title-offer"
+      "content content"
+      "price1 price2"
+      "price3 price4"
+      "button-offer button-offer";
+    grid-column-gap: 2rem;
+  }
+
+  .contact {
+    width: 80vw;
+    grid-template-areas:
+      "title-cont title-cont"
+      "contact account"
+      "map map";
+    justify-content: left;
+    grid-column-gap: 2rem;
+  }
+
+  .contact__account {
+    margin-top: 0;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .footer {
+    height: 20vh;
+  }
+
+  .footer__p {
+    width: 80vw;
+    font-size: 0.75rem;
+  }
+}
+
+/* media max-width = 1024 px______________________________________________________________________________________________________________ */
+
+@media screen and (max-width: 1024px) {
+
+  .nav__li {
+    margin: 0.25rem 0.75rem;
+  }
+
+  .slogan__section {
+    margin: 60px auto;
+  }
+
+  .slogan {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .slogan__p {
+    padding-top: 0.75rem;
   }
 
   .offer {
@@ -380,11 +447,70 @@ body {
   }
 
   .offer__container {
-    max-width: 80%;
-    margin: 0 auto 220px;
+    margin: 0 auto 50dvw;
+  }
+
+  .offer__price--title,
+  .contact__title--data {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .offer__price--price {
+    font-size: 1.2rem;
+  }
+}
+
+/* media max-width = 767 px______________________________________________________________________________________________________________ */
+
+
+@media screen and (max-width: 767px) {
+
+  .header__nav {
+    max-width: 90%;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+  }
+
+  .icon_nav {
+    display: block
+  }
+
+  .nav__li {
+    display: none;
+  }
+
+  .slogan__section {
+    margin: 50px auto;
+  }
+
+  .slogan {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  .slogan__p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin: 3.5rem 0 2rem;
+  }
+
+  .button {
+    margin-top: 2.5rem;
+  }
+
+  .contact__account {
+    margin-top: 2rem;
+  }
+
+  .offer__container {
+    margin: 0 auto 60dvw;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "title"
+      "title-offer"
       "content"
       "price1"
       "price2"
@@ -403,131 +529,28 @@ body {
 
   .offer__price--title,
   .contact__title--data {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.8rem;
-    color: var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
   }
 
   .offer__price--price {
-    color: var(--motif-color);
-    font-weight: 600;
     font-size: 1rem;
   }
 
   .contact {
-    width: 80vw;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "title"
+      "title-cont"
       "contact"
       "account"
       "map";
-    justify-content: left;
-  }
-
-  .map {
-    width: 100%;
   }
 
   .footer {
-    background-repeat: no-repeat;
     height: auto;
   }
 
   .footer__p {
-    width: 80%;
-    font-size: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-
-  .header__nav,
-  .slogan__section,
-  .about,
-  .offer__container {
-    max-width: 80%;
-  }
-
-  .slogan,
-  .slogan__p {
-    text-align: left;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "title"
-      "content"
-      "portrait"
-      "info"
-      "book"
-      "button";
-  }
-
-  .portrait {
-    width: 100%;
-    transform: translate(0, 0);
-    justify-self: center;
-  }
-
-  .book {
-    width: 100%;
-    justify-self: center;
-  }
-
-  .about__content-book {
-    transform: translate(0, 0);
-    padding: 0;
-  }
-
-  .portrait,
-  .book,
-  .about__content-book,
-  .offer__price,
-  .map {
-    margin-top: 2rem;
-  }
-
-  .offer {
-    background-size: 130%;
-  }
-
-  .offer__container {
-    margin: 0 auto 450px;
-    grid-template-areas:
-      "title ."
-      "content content"
-      "price1 price2"
-      "price3 price4"
-      "button-offer button-offer";
-    grid-column-gap: 2rem;
-  }
-
-  .contact {
-    width: 80vw;
-    grid-template-areas:
-      "title ."
-      "contact account"
-      "map map";
-    justify-content: left;
-  }
-
-  .contact__account {
-    margin-top: 0;
-  }
-
-  .map {
-    width: 100%;
-  }
-
-  .footer {
-    height: 20vh;
-  }
-
-  .footer__p {
-    width: 80vw;
     font-size: 0.5rem;
   }
 }
