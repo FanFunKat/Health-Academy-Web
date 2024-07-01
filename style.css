@@ -67,16 +67,34 @@ body {
 
 .hero {
   height: 100dvh;
-  background-image: url(img/hero.jpg);
+  width: 100%;
+  /* background-image: url(img/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   display: grid;
   align-items: end;
 }
 
+.hero__img {
+  height: 100dvh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 .hero__container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
   display: grid;
   color: var(--secondary-color);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0) 100%);
