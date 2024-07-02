@@ -270,6 +270,28 @@ body {
   font-size: 1.5rem;
 }
 
+/* __________________________________________________________________________Opinions */
+
+.opinions {
+  background-color: var(--secondary-color);
+  width: 1220px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.opinions__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__row--top {
+  display: flex;
+}
+
 /* __________________________________________________________________________Contact */
 
 .contact {
