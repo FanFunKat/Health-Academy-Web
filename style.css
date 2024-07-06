@@ -290,6 +290,7 @@ body {
 
 .slider__row--top {
   display: flex;
+  align-items: center;
 }
 
 /* __________________________________________________________________________Contact */
