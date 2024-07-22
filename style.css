@@ -281,7 +281,7 @@ body {
   grid-template-rows: auto;
 }
 
-.carousel__container {
+.slider__container {
   background-color: blueviolet;
   width: 1220px;
   display: flex;
@@ -290,7 +290,7 @@ body {
   /* overflow: hidden; */
 }
 
-.slider__row--top {
+.slider {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -315,7 +315,7 @@ body {
   overflow: hidden;
 }
 
-.carousel__card {
+.slider__card {
   flex-shrink: 0;
   width: 348px;
   background-color: white;
