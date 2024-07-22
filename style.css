@@ -281,16 +281,46 @@ body {
   grid-template-rows: auto;
 }
 
-.opinions__slider {
+.carousel__container {
+  background-color: blueviolet;
+  width: 1220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  /* overflow: hidden; */
 }
 
 .slider__row--top {
   display: flex;
   align-items: center;
+  gap: 2rem;
+  /* flex: 0 0 auto; */
+}
+
+.arrow {
+  background-color: var(--motif-color);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.track {
+  width: 1076px;
+  background-color: aquamarine;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.carousel__card {
+  flex-shrink: 0;
+  width: 348px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
 }
 
 /* __________________________________________________________________________Contact */
@@ -376,7 +406,8 @@ body {
   .header__nav,
   .slogan__section,
   .about,
-  .offer__container {
+  .offer__container,
+  .opinions {
     max-width: 80%;
   }
 
@@ -596,3 +627,5 @@ body {
     font-size: 0.5rem;
   }
 }
+
+/* _______________________________________________________________________________________________________________ */

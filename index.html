@@ -15,6 +15,8 @@
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="your-script.js"></script>
 </head>
 <body>
   <header class="header">
@@ -95,12 +97,11 @@
 
     <section class="opinions" id="Opinions">
       <h2 class="opinions__title title">Opinie</h2>
-      <div class="opinions__slider" id="slider">
+      <div class="carousel__container" id="slider">
         <div class="slider__row--top">
-          <img src="#" alt="strzałka w lewo" class="arrow arrow-left">
-          <div class="slaider__content">
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+          <img src="img/chevron-left.svg" alt="strzałka w lewo" class="arrow arrow-left">
+          <div class="track">
+            <div class="carousel__card">
               <p class="opinion__text">Jeśli komuś czegoś w życiu brakuje i nie wie czego, lub chciałby
     popracować nad sobą to polecam na 100% Weronika Socha. Zadaje duzo
     pytan, które pokazują jacy jesteśmy. Jest dobrym sluchaczem oraz
@@ -110,8 +111,7 @@
     warsztatach oraz na prywatnych sesjach, pomogła mi. Dziękuję Weroniko.</p>
               <p class="opinion__name">Joanna K.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Warsztaty dla młodzieży prowadzone przez Weronikę to cały wachlarz
     zabiegów, których wspólnym mianownikiem jest serce z jakim Wera
     podchodzi do każdego młodego człowieka. Wera jest jak sejsmograf,
@@ -126,8 +126,7 @@
     😍Dziękuję!</p>
               <p class="opinion__name">Anna B-L.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Bardzo polecam gabinet Weroniki, wszystkim tym, którzy zmagają się z
     różnymi problemami i tracą nadzieję na to, że coś jeszcze może się
     zmienić.<br>
@@ -137,15 +136,13 @@
     utraconą nadzieją na wewnętrzny porządek. Polecam !!!</p>
               <p class="opinion__name">Edyta N.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">"Nic nie dzieje się bez przyczyny".
     Poznanie Weroniki uruchomiło lawinę pozytywnych zdarzeń. Jest Kobietą
     o wielkiej wierze w siłę drugiego człowieka.</p>
               <p class="opinion__name">Joanna D.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Szukasz dobrego TERAPEUTY❓ Weronika Socha godna POLECENIA‼️
     O warsztatach z Weroniką opowiedziała mi przyjaciółka.W moim sercu
     zrodziło się ogromne pragnienie bycia tam... na chwilkę zapomnialam o
@@ -156,8 +153,7 @@
     niedosyt....Wróce napewno‼️</p>
               <p class="opinion__name">Marcela K.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Dużo dobrego słyszałam o Weronice. Ostatnio miałam  okazję osobiście
     uczestniczyć w jej warsztatach. Teraz mogę w oparciu o własne
     doświadczenia pracy z Weroniką polecić ją w 100%. Poza ogromnym
@@ -167,22 +163,20 @@
     kolejne 💕😊</p>
               <p class="opinion__name">Magdalena W.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Polecam pomoc jaką oferuje Weronika Socha, ponieważ jest osobą godną
     zaufania, empatyczną i pracuje z pasją. Wskazuje odpowiednie
     narzędzia, jeżeli tylko ktoś chce je wykorzystać i pracować pod jej
     skrzydłami to sukces gwarantowany.</p>
               <p class="opinion__name">Zofia K.</p>
             </div>
-            <div class="opinion">
-              <div class="icon"><img src="#" alt=""></div>
+            <div class="carousel__card">
               <p class="opinion__text">Weronika jest pelna optymizmu I pozytywnej energii co idzie w parze z
     bogata wiedza I pelnym profesjonalizmem</p>
               <p class="opinion__name">Joanna Ch.</p>
             </div>
           </div>
-          <img src="#" alt="strzałka w prawo" class="arrow arrow-right">
+          <img src="img/chevron-right.svg" alt="strzałka w prawo" class="arrow arrow-right">
         </div>
         <div class="slider__row--bottom">
           <div id="dots">
