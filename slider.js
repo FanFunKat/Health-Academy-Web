@@ -10,6 +10,14 @@ const totalOpinionsCards = allOpinionsCards.length;
 
 const totalSliderWidth = totalOpinionsCards * opinionsWidth;
 
+const prevBtn = document.getElementById('btn__prev');
+prevBtn.addEventListener('click', () => {
+    slider.scrollLeft -= opinionsWidth;
+});
 
+const nextBtn = document.getElementById('btn__next');
+nextBtn.addEventListener('click', () => {
+    slider.scrollLeft += opinionsWidth;
+});
 
 
