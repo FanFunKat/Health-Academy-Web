@@ -2,7 +2,7 @@ const slider = document.querySelector('.track');
 const sliderWidth = slider.offsetWidth;
 
 const opinions = document.querySelector('.slider__card');
-const opinionsWidth = opinions.offsetWidth;
+const opinionsWidth = opinions.offsetWidth + 16;
 
 const allOpinionsCards = document.querySelectorAll('.slider__card');
 const totalOpinionsCards = allOpinionsCards.length;
@@ -20,4 +20,6 @@ nextBtn.addEventListener('click', () => {
     slider.scrollLeft += opinionsWidth;
 });
 
-
+const autoScroller = setInterval(() => {
+    slider.scrollLeft += opinionsWidth;
+}, 5000);
