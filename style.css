@@ -274,7 +274,7 @@ body {
 
 .opinions {
   background-color: var(--secondary-color);
-  width: 1220px;
+  max-width: 1220px;
   margin: 0 auto 50px;
   display: grid;
   grid-template-columns: 1fr;
@@ -283,11 +283,11 @@ body {
 
 .slider__container {
   background-color: blueviolet;
-  width: 1220px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .arrow {
@@ -296,11 +296,15 @@ body {
   height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
+  position: absolute;
   /* padding: 0.5rem; */
 }
 
+#btn__next{
+  right: calc((100% - 1220px)/2);
+}
+
 .track {
-  width: 1076px;
   background-color: aquamarine;
   display: flex;
   gap: 1rem;
@@ -409,9 +413,7 @@ body {
   .slogan__section,
   .about,
   .offer__container,
-  .opinions,
-  .slider__container,
-  .track {
+  .opinions {
     max-width: 80%;
   }
 
@@ -613,6 +615,18 @@ body {
   .offer__price--price {
     font-size: 1rem;
   }
+
+  .track {
+    flex-direction: column;
+    margin: 0;
+  }
+  .slider__card{
+    width: 100%;
+  }
+
+  .arrow{
+    display: none;
+}
 
   .contact {
     grid-template-columns: 1fr;
