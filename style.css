@@ -197,7 +197,7 @@ body {
 
 .offer {
   width: 100%;
-  background-image: url(img/cenniktlo.png);
+  background-image: url(img/cenniktlo.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -415,7 +415,7 @@ body {
 /* __________________________________________________________________________Footer */
 
 .footer {
-  background-image: url(img/footer.png);
+  background-image: url(img/footer.jpg);
   height: 400px;
   background-size: cover;
   background-position: right;
