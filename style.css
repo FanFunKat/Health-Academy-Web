@@ -154,12 +154,14 @@ body {
 }
 
 .portrait {
+  width: 600px;
   grid-area: portrait;
   transform: translate(-20px, -26px);
   border-radius: 10px;
 }
 
 .book {
+  width: 545px;
   grid-area: book;
   margin-top: 3.5rem;
   border-radius: 10px;
@@ -195,7 +197,7 @@ body {
 
 .offer {
   width: 100%;
-  background-image: url(img/cenniktlo.png);
+  background-image: url(img/cenniktlo.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -413,7 +415,7 @@ body {
 /* __________________________________________________________________________Footer */
 
 .footer {
-  background-image: url(img/footer.png);
+  background-image: url(img/footer.jpg);
   height: 400px;
   background-size: cover;
   background-position: right;
