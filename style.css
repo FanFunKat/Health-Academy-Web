@@ -154,12 +154,14 @@ body {
 }
 
 .portrait {
+  width: 600px;
   grid-area: portrait;
   transform: translate(-20px, -26px);
   border-radius: 10px;
 }
 
 .book {
+  width: 545px;
   grid-area: book;
   margin-top: 3.5rem;
   border-radius: 10px;
