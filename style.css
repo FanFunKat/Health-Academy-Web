@@ -4,6 +4,7 @@
   --motif-color: rgb(255, 156, 37);
   --accent-color: rgb(51, 136, 179);
   --shadow-color: rgba(0, 0, 0, 0.25);
+  --motif-sec-color:rgb(250, 213, 168);
 }
 
 * {
@@ -282,7 +283,7 @@ body {
 }
 
 .slider__container {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -305,7 +306,7 @@ body {
 }
 
 .track {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -313,7 +314,7 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  margin: 0 2.7rem;
+  margin: 0 3.5rem;
 }
 
 .track::-webkit-scrollbar {
@@ -322,13 +323,21 @@ body {
 
 .slider__card {
   flex-shrink: 0;
-  width: 348px;
+  width: calc((100% - 2rem)/3);
   min-width: 300px;
-  background-color: white;
+  background-color: var(--motif-sec-color);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
+.slider__card:nth-child(2){
+  /* background-color: rgb(166, 0, 255); */
+  width: calc(((100% - 2rem)/3) * 2 + 1rem);
+}
+
+.is-hidden {
+  display: none;
+}
 /* __________________________________________________________________________Contact */
 
 .contact {

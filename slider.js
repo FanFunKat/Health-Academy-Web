@@ -1,25 +1,26 @@
-const slider = document.querySelector('.track');
-const sliderWidth = slider.offsetWidth;
+const sliderTrack = document.querySelector('.track');
+const sliderTrackWidth = sliderTrack.offsetWidth;
+const opinions = Array.from(sliderTrack.children);
 
-const opinions = document.querySelector('.slider__card');
-const opinionsWidth = opinions.offsetWidth + 16;
+const opinion = document.querySelector('.slider__card');
+const opinionWidth = opinion.offsetWidth + 16;
 
-const allOpinionsCards = document.querySelectorAll('.slider__card');
-const totalOpinionsCards = allOpinionsCards.length;
+const allOpinionCards = document.querySelectorAll('.slider__card');
+const totalOpinionCards = allOpinionCards.length;
 // console.log(totalOpinionsCards);
 
-const totalSliderWidth = totalOpinionsCards * opinionsWidth;
+const totalSliderWidth = totalOpinionCards * opinionWidth;
 
 const prevBtn = document.getElementById('btn__prev');
 prevBtn.addEventListener('click', () => {
-    slider.scrollLeft -= opinionsWidth;
+    sliderTrack.scrollLeft -= opinionWidth;
 });
 
 const nextBtn = document.getElementById('btn__next');
 nextBtn.addEventListener('click', () => {
-    slider.scrollLeft += opinionsWidth;
+    sliderTrack.scrollLeft += opinionWidth;
 });
 
-const autoScroller = setInterval(() => {
-    slider.scrollLeft += opinionsWidth;
-}, 5000);
+// const autoScroller = setInterval(() => {
+//     slider.scrollLeft += opinionsWidth;
+// }, 5000);
