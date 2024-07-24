@@ -23,19 +23,30 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.classList.add('current__slide');
 }
 
+const updateDots = (currentDot, targetDot) => {
+  currentDot.classList.remove('current__slide');
+  targetDot.classList.add('current__slide');
+}
+
 prevBtn.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current__slide');
   const prevSlide = currentSlide.previousElementSibling;
+  const currentDot = dotsNav.querySelector('.current__slide');
+  const prevDot = currentDot.previousElementSibling;
 
   moveToSlide(track, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot)
 })
 
 nextBtn.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current__slide');
   // console.log('current slide',currentSlide);
   const nextSlide = currentSlide.nextElementSibling;
+  const currentDot = dotsNav.querySelector('.current__slide');
+  const nextDot = currentDot.nextElementSibling;
 
   moveToSlide(track, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
 })
 
 dotsNav.addEventListener('click', e => {
@@ -50,7 +61,5 @@ dotsNav.addEventListener('click', e => {
   const targetSlide = slides[targetIndex];
 
   moveToSlide(track, currentSlide, targetSlide);
-
-  currentDot.classList.remove('current__slide');
-  targetDot.classList.add('current__slide');
+  updateDots(currentDot, targetDot);
 })
