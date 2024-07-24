@@ -2,7 +2,7 @@
   --primary-color: rgb(0, 0, 0);
   --ham-color: rgba(0, 0, 0, 0.9);
   --secondary-color: rgb(255, 255, 255);
-  --opinion-color:rgba(255, 255, 255, 0.8);
+  --opinion-color:rgba(255, 255, 255, 0.7);
   --motif-color: rgb(255, 156, 37);
   --accent-color: rgb(51, 136, 179);
   --shadow-color: rgba(0, 0, 0, 0.25);
@@ -421,6 +421,7 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   margin: 0 3.5rem;
+  gap: 1rem;
 }
 
 .track::-webkit-scrollbar {
@@ -787,7 +788,6 @@ body {
     width: 100%;
     flex-direction: column;
     margin: 0;
-    gap: 1rem;
   }
 
   .slider__card{
