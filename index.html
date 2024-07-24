@@ -16,6 +16,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <script defer src="slider.js"></script>
+  <script defer src="menu.js"></script>
 </head>
 <body>
   <header class="header">
@@ -28,9 +29,24 @@
           <li class="nav__li"><a href="#Opinions" class="nav__a">Opinie</a></li>
           <li class="nav__li"><a href="#Contact" class="nav__a">Kontakt</a> </li>
         </ul>
-        <img src="img/menu.svg" alt="menu" class="icon_nav">
       </nav>
     </div>
+    <nav class="ham">
+      <div class="ham__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+      <div class="off__screen--menu">
+        <ul class="nav__ul--ham">
+          <li class="nav__li--ham"><a href="#Home" class="nav__a--ham">Strona główna</a></li>
+          <li class="nav__li--ham"><a href="#About" class="nav__a--ham">O mnie</a></li>
+          <li class="nav__li--ham"><a href="#Offer" class="nav__a--ham">Specjalizacje i ceny</a></li>
+          <li class="nav__li--ham"><a href="#Opinions" class="nav__a--ham">Opinie</a></li>
+          <li class="nav__li--ham"><a href="#Contact" class="nav__a--ham">Kontakt</a> </li>
+        </ul>
+      </div>
   </header>
   <main class="main">
     <section class="hero" id="Home">
