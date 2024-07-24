@@ -22,16 +22,16 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   targetSlide.classList.add('current__slide');
 }
 
+prevBtn.addEventListener('click', e => {
+  const currentSlide = track.querySelector('.current__slide');
+  const prevSlide = currentSlide.previousElementSibling;
+  moveToSlide(track, currentSlide, prevSlide);
+})
+
 nextBtn.addEventListener('click', e => {
-  const currentSlide = track.querySelector('.current__slide')
+  const currentSlide = track.querySelector('.current__slide');
   // console.log('current slide',currentSlide);
   const nextSlide = currentSlide.nextElementSibling;
-  // if(nextSlide) {
-  //   const amountToMove = parseFloat(nextSlide.style.left);
-  //   console.log('move', amountToMove);
-  //   console.log(typeof(amountToMove))
-  //   track.scrollLeft = amountToMove;
-  // }
   moveToSlide(track, currentSlide, nextSlide);
 })
 
