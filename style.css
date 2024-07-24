@@ -479,6 +479,10 @@ body {
   background-color: var(--accent-color);
   border: 2px var(--secondary-color) solid
 }
+
+.is__hidden {
+  display: none;
+}
 /* __________________________________________________________________________Contact */
 
 .contact {
