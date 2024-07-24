@@ -9,7 +9,7 @@ const dots = Array.from(dotsNav.children);
 // console.log(dots)
 
 const slideWidth = slides[0].getBoundingClientRect().width;
-console.log('width', slideWidth, typeof(slideWidth))
+// console.log('width', slideWidth, typeof(slideWidth))
 
 const setSlidePosition = (slide, index) => {
   slide.style.left = (slideWidth + 16) * index + 'px';
