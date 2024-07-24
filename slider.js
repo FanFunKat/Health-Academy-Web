@@ -4,8 +4,9 @@ const slides = Array.from(track.children);
 // const oneSlide = document.querySelector('.slider__card')
 const nextBtn = document.getElementById('btn__next');
 const prevBtn = document.getElementById('btn__prev');
-const dotsNav = document.querySelector('.slider__indicator');
+const dotsNav = document.querySelector('.slider__nav');
 const dots = Array.from(dotsNav.children);
+// console.log(dots)
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 console.log('width', slideWidth, typeof(slideWidth))
@@ -25,6 +26,7 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 prevBtn.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current__slide');
   const prevSlide = currentSlide.previousElementSibling;
+
   moveToSlide(track, currentSlide, prevSlide);
 })
 
@@ -32,57 +34,23 @@ nextBtn.addEventListener('click', e => {
   const currentSlide = track.querySelector('.current__slide');
   // console.log('current slide',currentSlide);
   const nextSlide = currentSlide.nextElementSibling;
+
   moveToSlide(track, currentSlide, nextSlide);
 })
 
-// const slide = document.querySelector('.slider__card');
-// const slideWidth = slide.offsetWidth;
-// console.log('card width', slideWidth)
+dotsNav.addEventListener('click', e => {
+  const targetDot = e.target.closest('button');
 
-// const allSlideCards = document.querySelectorAll('.slider__card');
-// const totalSlideCards = allSlideCards.length;
-// console.log(totalOpinionsCards);
+  if(!targetDot) return;
 
-// const totalSliderWidth = totalSlideCards * slideWidth;
+  const currentSlide = track.querySelector('.current__slide')
+  const currentDot = dotsNav.querySelector('.current__slide');
+  const targetIndex = dots.findIndex(dot => dot === targetDot);
+  // console.log(targetIndex)
+  const targetSlide = slides[targetIndex];
 
-// const prevBtn = document.getElementById('btn__prev');
-// prevBtn.addEventListener('click', () => {
-//   sliderTrack.scrollLeft -= slideWidth;
-// });
+  moveToSlide(track, currentSlide, targetSlide);
 
-// const nextBtn = document.getElementById('btn__next');
-// nextBtn.addEventListener('click', () => {
-//   sliderTrack.scrollLeft += slideWidth;
-// });
-
-// const autoScroller = setInterval(() => {
-//     slider.scrollLeft += opinionsWidth;
-// }, 5000);
-
-
-
-
-
-// const moveToSlide = (track, currentSlide, targetSlide) => {
-//   track.style.transform = 'translateX(-' + slide.style.left + ')';
-//   currentSlide.classList.remove('current__slide');
-//   targetSlide.classList.add('current__slide');
-// }
-
-
-// nextBtn.addEventListener('click', e => {
-//   const currentSlide = slide.querySelector('.current__slide');
-//   const nextSlide = currentSlide.nextElementSibling;
-
-//   moveToSlide(slide, currentSlide, nextSlide);
-// })
-
-// const dotsNav = document.querySelector('.slider__indicator')
-// dotsNav.addEventListener('click', e => {
-//   const targetDot = e.target.closest('button');
-
-//   if(!targetDot) return;
-
-//   const currentSlide = sliderTrack.querySelector('.current__slide')
-
-// })
+  currentDot.classList.remove('current__slide');
+  targetDot.classList.add('current__slide');
+})

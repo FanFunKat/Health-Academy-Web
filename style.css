@@ -472,6 +472,7 @@ body {
   height: 1rem;
   background-color: var(--secondary-color);
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .slider__indicator.current__slide {
