@@ -1,6 +1,6 @@
 :root {
-  --primary-color: rgb(0, 0, 0);
-  --ham-color: rgba(0, 0, 0, 0.9);
+  --primary-color: rgb(70, 14, 2);
+  --ham-color: rgba(33, 7, 1, 0.9);
   --secondary-color: rgb(255, 255, 255);
   --opinion-color:rgba(255, 255, 255, 0.7);
   --motif-color: rgb(255, 156, 37);
@@ -90,6 +90,11 @@ body {
 .nav__a--ham {
   text-decoration: none;
   color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.nav__a--ham:hover {
+  color: var(--motif-color);
 }
 
 .ham{
@@ -187,7 +192,7 @@ body {
   z-index: 2;
   display: grid;
   color: var(--secondary-color);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgba(33, 7, 1, 0.8) 0%, rgba(33, 7, 1, 0.75) 25%, rgba(33, 7, 1, 0.5) 50%, rgba(33, 7, 1, 0.25) 75%, rgba(33, 7, 1, 0) 100%);
 }
 
 .slogan__section {
@@ -238,6 +243,7 @@ body {
 
 .about__content {
   grid-area: content;
+  color: var(--primary-color);
 }
 
 .portrait {
@@ -258,6 +264,7 @@ body {
   grid-area: info;
   transform: translate(-20px, 0);
   padding: 0 34px;
+  color: var(--primary-color);
 }
 
 .about__button {
@@ -312,6 +319,7 @@ body {
 
 .offer__description {
   grid-area: content;
+  color: var(--primary-color);
 }
 
 .price1 {
@@ -437,6 +445,7 @@ body {
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  color: var(--primary-color);
 }
 
 .quote,
@@ -506,11 +515,13 @@ body {
 
 .contact__info {
   grid-area: contact;
+  color: var(--primary-color);
 }
 
 .contact__account {
   grid-area: account;
   margin-top: 3.5rem;
+  color: var(--primary-color);
 }
 
 .map__div {
@@ -649,7 +660,7 @@ body {
   }
 
   .footer {
-    height: 20vh;
+    height: 500px;
   }
 
   .footer__p {
@@ -834,12 +845,25 @@ body {
   }
 
   .footer {
-    height: auto;
+    height: 400px;
   }
 
   .footer__p {
     font-size: 0.5rem;
   }
+}
+
+/* media max-width = 430 px______________________________________________________________________________________________________________ */
+
+@media screen and (max-width: 430px) {
+  .offer {
+    background-image: url(img/cennik_media.jpg);
+    background-size: contain;
+  }
+
+  /* .offer__container {
+    margin: 0 auto 100dvw;
+  } */
 }
 
 /* _______________________________________________________________________________________________________________ */
