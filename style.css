@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(70, 14, 2);
+  --primary-color: rgb(33, 7, 1);
   --ham-color: rgba(33, 7, 1, 0.9);
   --secondary-color: rgb(255, 255, 255);
   --opinion-color:rgba(255, 255, 255, 0.7);
@@ -364,6 +364,11 @@ body {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.5rem;
+  color: var(--primary-color);
+}
+
+.offer__price--subtitle,
+.offer__price--description{
   color: var(--primary-color);
 }
 
@@ -754,6 +759,11 @@ body {
     margin-top: 2rem;
   }
 
+  .offer {
+    background-image: url(img/cennik_media.jpg);
+    background-size: contain;
+  }
+
   .offer__container {
     margin: 0 auto 60dvw;
     grid-template-columns: 1fr;
@@ -795,7 +805,7 @@ body {
   }
 
   .slider__container::-webkit-scrollbar {
-      width: 12px;
+      width: 6px;
   }
 
   .slider__container::-webkit-scrollbar-track {
@@ -805,7 +815,7 @@ body {
   .slider__container::-webkit-scrollbar-thumb {
       background-color: var(--accent-color);
       border-radius: 6px;
-      border: 3px solid var(--secondary-color);
+      border: 1px solid var(--secondary-color);
   }
 
   .slider__container::-webkit-scrollbar-thumb:hover {
@@ -852,18 +862,3 @@ body {
     font-size: 0.5rem;
   }
 }
-
-/* media max-width = 430 px______________________________________________________________________________________________________________ */
-
-@media screen and (max-width: 430px) {
-  .offer {
-    background-image: url(img/cennik_media.jpg);
-    background-size: contain;
-  }
-
-  /* .offer__container {
-    margin: 0 auto 100dvw;
-  } */
-}
-
-/* _______________________________________________________________________________________________________________ */
