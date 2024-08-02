@@ -7,3 +7,7 @@ The visual design was created in Figma. To build the structure of the site, I us
 - Desktop and mobile versions
 - Hamburger menu
 - Carousel with client reviews
+
+# Visite website
+
+[WeronikaSocha.pl](https://weronikasocha.pl/)
